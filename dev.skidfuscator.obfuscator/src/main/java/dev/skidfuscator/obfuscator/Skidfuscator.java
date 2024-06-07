@@ -88,7 +88,7 @@ import static java.nio.file.Files.createTempDirectory;
 import static org.fusesource.jansi.Ansi.ansi;
 
 /**
- * The type Skidfuscator.
+ * The type Skidfuscator. dasdsad
  */
 @Getter
 public class Skidfuscator {
