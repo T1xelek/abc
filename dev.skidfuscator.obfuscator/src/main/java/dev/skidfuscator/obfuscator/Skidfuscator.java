@@ -49,6 +49,7 @@ import dev.skidfuscator.obfuscator.transform.impl.number.NumberTransformer;
 import dev.skidfuscator.obfuscator.transform.impl.string.StringEncryptionType;
 import dev.skidfuscator.obfuscator.transform.impl.string.StringTransformer;
 import dev.skidfuscator.obfuscator.transform.impl.string.StringTransformerV2;
+import dev.skidfuscator.obfuscator.transform.impl.flow.driver.DriverTransformer;
 import dev.skidfuscator.obfuscator.util.MapleJarUtil;
 import dev.skidfuscator.obfuscator.util.MiscUtil;
 import dev.skidfuscator.obfuscator.util.ProgressUtil;
@@ -647,14 +648,15 @@ public class Skidfuscator {
                     // ----- COMMUNITY -----
                     new NumberTransformer(this),
                     new SwitchTransformer(this),
+                    new DriverTransformer(this),
+                    new StringTransformerV2(this),
+                    new NegationTransformer(this),
+                    new AbstractTransformer(this),
                     new BasicConditionTransformer(this),
                     new BasicExceptionTransformer(this),
                     new BasicRangeTransformer(this),
-                /*
-                new FlatteningFlowTransformer(this),*/
+                    new BasicSimpliferTransformer(this),
                     new AhegaoTransformer(this)
-                    //new SimpleOutlinerTransformer()
-                    //
             ));
         } else {
             transformers.addAll(Arrays.asList(
