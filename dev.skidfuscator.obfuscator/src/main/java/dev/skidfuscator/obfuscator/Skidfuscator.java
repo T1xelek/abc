@@ -656,7 +656,7 @@ public class Skidfuscator {
                     new BasicConditionTransformer(this),
                     new BasicExceptionTransformer(this),
                     new BasicRangeTransformer(this),
-                    new BasicSimpliferTransformer(this),
+                    new BasicSimplifierTransformer(this),
                     new AhegaoTransformer(this)
             ));
         } else {
