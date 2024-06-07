@@ -42,6 +42,8 @@ import dev.skidfuscator.obfuscator.skidasm.SkidMethodNode;
 import dev.skidfuscator.obfuscator.transform.Transformer;
 import dev.skidfuscator.obfuscator.transform.impl.SwitchTransformer;
 import dev.skidfuscator.obfuscator.transform.impl.flow.*;
+import dev.skidfuscator.obfuscator.transform.impl.NegationTransformer;
+import dev.skidfuscator.obfuscator.transform.impl.flow.BasicSimplifierTransformer;
 import dev.skidfuscator.obfuscator.transform.impl.flow.condition.BasicConditionTransformer;
 import dev.skidfuscator.obfuscator.transform.impl.flow.exception.BasicExceptionTransformer;
 import dev.skidfuscator.obfuscator.transform.impl.misc.AhegaoTransformer;
@@ -651,7 +653,6 @@ public class Skidfuscator {
                     new DriverTransformer(this),
                     new StringTransformerV2(this),
                     new NegationTransformer(this),
-                    new AbstractTransformer(this),
                     new BasicConditionTransformer(this),
                     new BasicExceptionTransformer(this),
                     new BasicRangeTransformer(this),
